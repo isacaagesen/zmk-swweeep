@@ -87,8 +87,8 @@
             label = "Symbols";
             bindings = <
 &kp EXCL   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LESS_THAN         &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp QUESTION
-&kp MINUS  &kp LBKT          &kp LBRC        &kp ASTERISK          &kp PERCENT           &kp AMPERSAND     &kp LEFT_CONTROL       &kp LEFT_ALT     &kp LEFT_GUI       &kp LEFT_SHIFT
-&kp CAPS   &kp AT            &Pound          &kp DOLLAR            &Euro                 &kp PLUS          &kp EQUAL              &kp CARET        &kp ASTERISK       &kp TILDE
+&kp GRAVE  &kp EQUAL         &kp CARET       &kp ASTERISK          &kp PERCENT           &kp AMPERSAND     &kp LEFT_CONTROL       &kp LEFT_ALT     &kp LEFT_GUI       &kp LEFT_SHIFT
+&kp HASH   &kp AT            &Pound          &kp DOLLAR            &Euro                 &kp PLUS          &kp SLASH              &kp PIPE         &kp BACKSLASH      &kp TILDE
                                              &trans                &trans         &mo 3  &trans            &trans                 &trans
             >;
         };
