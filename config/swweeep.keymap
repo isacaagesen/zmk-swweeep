@@ -22,7 +22,10 @@
         semicolon: semicolon {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMICOLON";
-            bindings = <&kp SEMICOLON>;
+            bindings =
+                <&kp COMMA>,
+                <&kp SEMICOLON>;
+
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
