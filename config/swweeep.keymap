@@ -29,6 +29,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        colon: colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON";
+            bindings =
+                <&kp PERIOD>,
+                <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -76,9 +86,9 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T             &kp Y  &kp U       &kp I       &kp O    &kp P
-&kp A  &kp S  &kp D  &kp F  &kp G             &kp H  &kp J       &kp K       &kp L    &kp SQT
-&kp Z  &kp X  &kp C  &kp V  &kp B             &kp N  &kp M       &semicolon  &kp DOT  &kp MINUS
+&kp Q  &kp W  &kp E  &kp R  &kp T             &kp Y  &kp U       &kp I       &kp O   &kp P
+&kp A  &kp S  &kp D  &kp F  &kp G             &kp H  &kp J       &kp K       &kp L   &kp SQT
+&kp Z  &kp X  &kp C  &kp V  &kp B             &kp N  &kp M       &semicolon  &colon  &kp MINUS
                      &none  &kp SPACE  &mo 1  &mo 2  &kp LSHIFT  &none
             >;
         };
