@@ -46,6 +46,18 @@
             #binding-cells = <0>;
             bindings = <&kp LC(Z)>;
         };
+        Pound: Pound {
+            compatible = "zmk,behavior-macro";
+            label = "POUND";
+            #binding-cells = <0>;
+            bindings = <&none>;
+        };
+        Euro: Euro {
+            compatible = "zmk,behavior-macro";
+            label = "EURO";
+            #binding-cells = <0>;
+            bindings = <&none>;
+        };
     };
 
     keymap {
@@ -64,20 +76,20 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-&kp TAB     &kp PG_UP     &kp UP        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP          &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp BACKSPACE
-&kp LSHIFT  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL   &kp TAB                  &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp ENTER
-&Undo       &Cut          &Copy         &Paste             &kp TAB                  &kp ESCAPE  &kp N1         &kp N2       &kp N3     &kp DELETE
-                                        &trans             &trans           &trans  &mo 3       &trans         &trans
+&kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP          &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp BACKSPACE
+&kp LSHIFT  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL   &kp TAB                  &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp ENTER
+&Undo       &Cut              &Copy         &Paste             &kp F24                  &kp ESCAPE  &kp N1         &kp N2       &kp N3     &kp DELETE
+                                            &trans             &trans           &trans  &mo 3       &trans         &trans
             >;
         };
 
         sym_layer {
             label = "Symbols";
             bindings = <
-&kp EXCL   &kp AT     &kp HASH         &kp DLLR          &kp PRCNT          &kp HOME  &kp PAGE_DOWN      &kp PAGE_UP   &kp END       &kp BACKSPACE
-&kp MINUS  &kp LBKT   &kp LBRC         &kp LPAR          &kp LT             &kp LEFT  &kp LEFT_CONTROL   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT
-&kp CAPS   &kp GRAVE  &kp LC(LS(TAB))  &kp LC(LG(LEFT))  &caps_word         &trans    &kp LC(LG(RIGHT))  &kp LC(TAB)   &trans        &kp DELETE
-                                       &trans            &trans      &mo 3  &trans    &trans             &trans
+&kp EXCL   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LESS_THAN         &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp QUESTION
+&kp MINUS  &kp LBKT          &kp LBRC        &kp ASTERISK          &kp PERCENT           &kp AMPERSAND     &kp LEFT_CONTROL       &kp LEFT_ALT     &kp LEFT_GUI       &kp LEFT_SHIFT
+&kp CAPS   &kp AT            &Pound          &kp DOLLAR            &Euro                 &kp PLUS          &kp EQUAL              &kp CARET        &kp ASTERISK       &kp TILDE
+                                             &trans                &trans         &mo 3  &trans            &trans                 &trans
             >;
         };
 
