@@ -67,27 +67,27 @@
 &kp TAB     &kp PG_UP     &kp UP        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP          &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp BACKSPACE
 &kp LSHIFT  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL   &kp END                  &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp ENTER
 &Undo       &Cut          &Copy         &Paste             &kp TAB                  &kp ESCAPE  &kp N1         &kp N2       &kp N3     &kp DELETE
-                                        &trans             &trans           &trans  &trans      &trans         &trans
+                                        &trans             &trans           &trans  &mo 3       &trans         &trans
             >;
         };
 
         sym_layer {
             label = "Symbols";
             bindings = <
-&kp EXCL   &kp AT     &kp HASH         &kp DLLR          &kp PRCNT           &kp HOME  &kp PAGE_DOWN      &kp PAGE_UP   &kp END       &kp BACKSPACE
-&kp MINUS  &kp LBKT   &kp LBRC         &kp LPAR          &kp LT              &kp LEFT  &kp LEFT_CONTROL   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT
-&kp CAPS   &kp GRAVE  &kp LC(LS(TAB))  &kp LC(LG(LEFT))  &caps_word          &trans    &kp LC(LG(RIGHT))  &kp LC(TAB)   &trans        &kp DELETE
-                                       &trans            &trans      &trans  &trans    &trans             &trans
+&kp EXCL   &kp AT     &kp HASH         &kp DLLR          &kp PRCNT          &kp HOME  &kp PAGE_DOWN      &kp PAGE_UP   &kp END       &kp BACKSPACE
+&kp MINUS  &kp LBKT   &kp LBRC         &kp LPAR          &kp LT             &kp LEFT  &kp LEFT_CONTROL   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT
+&kp CAPS   &kp GRAVE  &kp LC(LS(TAB))  &kp LC(LG(LEFT))  &caps_word         &trans    &kp LC(LG(RIGHT))  &kp LC(TAB)   &trans        &kp DELETE
+                                       &trans            &trans      &mo 3  &trans    &trans             &trans
             >;
         };
 
         func_layer {
             label = "Function";
             bindings = <
-&bootloader   &kp LS(PG_UP)  &kp LS(UP)    &kp LS(PG_DN)  &trans                &kp C_MUTE        &kp F7  &kp F8     &kp F9  &kp F10
-&kp LS(HOME)  &kp LS(LEFT)   &kp LS(DOWN)  &kp LS(RIGHT)  &kp LS(END)           &kp K_VOL_UP      &kp F4  &kp F5     &kp F6  &kp F11
-&bt BT_SEL 3  &bt BT_SEL 2   &bt BT_SEL 1  &bt BT_SEL 0   &bt BT_CLR            &kp K_VOL_DN      &kp F1  &kp F2     &kp F3  &kp F12
-                                           &out OUT_USB   &out OUT_BLE  &trans  &kp C_PLAY_PAUSE  &trans  &kp SPACE
+&kp N1     &kp N2    &kp N3    &kp N4     &kp N5           &kp N6   &kp N7     &kp N8    &kp N9    &kp N0
+&kp LSHFT  &kp LGUI  &kp LALT  &kp LCTRL  &kp F11          &kp F12  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT
+&kp F1     &kp F2    &kp F3    &kp F4     &kp F5           &kp F6   &kp F7     &kp F8    &kp F9    &kp F10
+                               &none      &none    &trans  &trans   &trans     &none
             >;
         };
 
