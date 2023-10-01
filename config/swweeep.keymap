@@ -39,6 +39,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        space_windows: space_windows {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_WINDOWS";
+            bindings =
+                <&kp SPACE>,
+                <&kp LEFT_WIN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -54,6 +64,24 @@
             #binding-cells = <0>;
             bindings = <&none>;
         };
+        eee: eee {
+            compatible = "zmk,behavior-macro";
+            label = "EEE";
+            #binding-cells = <0>;
+            bindings = <&none>;
+        };
+        ooo: ooo {
+            compatible = "zmk,behavior-macro";
+            label = "OOO";
+            #binding-cells = <0>;
+            bindings = <&none>;
+        };
+        aaa: aaa {
+            compatible = "zmk,behavior-macro";
+            label = "AAA";
+            #binding-cells = <0>;
+            bindings = <&none>;
+        };
     };
 
     keymap {
@@ -62,30 +90,30 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R      &kp T             &kp Y  &kp U       &kp I         &kp O   &kp P
-&kp A  &kp S  &kp D  &kp F      &kp G             &kp H  &kp J       &kp K         &kp L   &kp SINGLE_QUOTE
-&kp Z  &kp X  &kp C  &kp V      &kp B             &kp N  &kp M       &semicolon    &colon  &kp MINUS
-                     &kp LCTRL  &kp SPACE  &mo 1  &mo 2  &kp LSHIFT  &kp LEFT_ALT
+&kp Q  &kp W  &kp E  &kp R      &kp T                  &kp Y  &kp U       &kp I         &kp O   &kp P
+&kp A  &kp S  &kp D  &kp F      &kp G                  &kp H  &kp J       &kp K         &kp L   &kp SINGLE_QUOTE
+&kp Z  &kp X  &kp C  &kp V      &kp B                  &kp N  &kp M       &semicolon    &colon  &kp MINUS
+                     &kp LCTRL  &space_windows  &mo 1  &mo 2  &kp LSHIFT  &kp LEFT_ALT
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-&kp EXCL   &kp SPACE  &kp SPACE  &kp SPACE      &kp QUESTION          &kp LEFT_BRACKET  &kp LESS_THAN         &kp CARET  &kp GREATER_THAN       &kp RIGHT_BRACKET
-&kp AT     &kp AT     &kp HASH   &kp AMPERSAND  &kp PERCENT           &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE      &kp SPACE             &kp SLASH         &kp ASTERISK          &kp EQUAL  &kp PLUS               &kp MINUS
-                                 &trans         &trans        &trans  &trans            &trans                &trans
+&kp EXCL      &kp INSERT  &kp INSERT  &kp TAB        &kp GRAVE              &kp LEFT_BRACKET  &kp LESS_THAN         &kp PIPE   &kp GREATER_THAN       &kp RIGHT_BRACKET
+&kp QUESTION  &kp AT      &kp HASH    &kp AMPERSAND  &kp PERCENT            &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
+&kp TILDE     &eee        &ooo        &aaa           &kp BACKSLASH          &kp SLASH         &kp ASTERISK          &kp EQUAL  &kp PLUS               &kp MINUS
+                                      &trans         &trans         &trans  &trans            &trans                &trans
             >;
         };
 
         raise_layer {
             label = "Raise";
             bindings = <
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE          &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE
-&kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp BACKSPACE
-&kp N6     &kp N7     &kp N8     &kp N9     &kp N0             &kp ESCAPE  &kp SPACE      &kp SPACE    &kp SPACE  &kp ENTER
-                                 &trans     &trans     &trans  &trans      &trans         &trans
+&kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &Pound  &kp DOLLAR  &Euro           &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp DELETE
+&kp N1             &kp N2           &kp N3  &kp N4      &kp N5          &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp BACKSPACE
+&kp N6             &kp N7           &kp N8  &kp N9      &kp N0          &kp ESCAPE  &kp SPACE      &semicolon   &colon     &kp ENTER
+                                            &trans      &trans  &trans  &trans      &trans         &trans
             >;
         };
 
