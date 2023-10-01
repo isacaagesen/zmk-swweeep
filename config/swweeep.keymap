@@ -93,8 +93,8 @@
             >;
         };
 
-        nav_layer {
-            label = "Navigation";
+        lower_layer {
+            label = "Lower";
             bindings = <
 &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP          &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp BACKSPACE
 &kp LSHIFT  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_CONTROL   &kp TAB                  &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &kp ENTER
@@ -103,8 +103,8 @@
             >;
         };
 
-        sym_layer {
-            label = "Symbols";
+        raise_layer {
+            label = "Raise";
             bindings = <
 &kp EXCL   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LESS_THAN         &kp GREATER_THAN  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp QUESTION
 &kp GRAVE  &kp EQUAL         &kp CARET       &kp ASTERISK          &kp PERCENT           &kp AMPERSAND     &kp LEFT_CONTROL       &kp LEFT_ALT     &kp LEFT_GUI       &kp LEFT_SHIFT
